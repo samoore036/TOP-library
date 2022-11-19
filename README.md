@@ -1,1 +1,1 @@
-# TOP-library
+The Odin Project library project. Users can add books with title, author, page count and if they have read the book or not. Users can also delete added books.
