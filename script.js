@@ -1,1 +1,2 @@
-console.log('hi');
+const root = document.documentElement;
+root.className = 'light';
