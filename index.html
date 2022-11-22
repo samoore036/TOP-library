@@ -11,45 +11,53 @@
     <body>
         <div id="header">
             <p>Library</p>
-            <button>Log in</button>
+            <div>
+                <button id="theme-btn"><img class="light-btn" src="images/theme-light.png"><img class="dark-btn" src="images/theme-dark.png"></button>
+                <button id="login-btn">Log in</button>
+            </div>
         </div>
 
         <div id="main-content">
             <div id="button-div">
-                <button>+ Add book</button>
-            </div>
+                <button id="add-btn">+ Add book</button>
+            </div> 
             
             <div id="book-div">
-                <div class="book">
-                    <p>Title</p>
-                    <p>Author</p>
-                    <p>123 pages</p>
-                    <button>Read</button>
-                    <button>Remove</button>
-                </div>
 
-
-                <div class="book">
-                    <p>Title</p>
-                    <p>Author</p>
-                    <p>123 pages</p>
-                    <button>Read</button>
-                    <button>Remove</button>
-                </div>
-
-                <div class="book">
-                    <p>Title</p>
-                    <p>Author</p>
-                    <p>123 pages</p>
-                    <button>Read</button>
-                    <button>Remove</button>
-                </div>
             </div>
         </div>
 
         <div id="footer">
-            <p>Webpage by: Shaheen Moore <img src="images/git-light.png"> <img src="images/git-dark.png"></p>
+            <p>Webpage by: Shaheen Moore <img class="light-btn" src="images/git-light.png"> <img class="dark-btn" src="images/git-dark.png"></p>
+        </div>  
+
+        <div class="modal hidden" id="login-modal">
+            <form>
+                <ul>
+                    <li><input type="text" id="username" placeholder="Username"></li>
+                    <li><input type="text" id="password" placeholder="Password"></li>
+                    <li><button type="submit">Login</button>
+                </ul>
+            </form>
         </div>
-            
+
+        <div class="modal hidden" id="book-modal">
+            <form id="book-form" onsubmit="event.preventDefault();">
+                <ul id="input-list">
+                    <li><div><input class="book-input" type="text" id="title" placeholder="Title" maxlength="100">
+                        <div class="error" id="title-error"></div>
+                    </div></li>
+                    <li><input class="book-input" type="text" id="author" placeholder="Author" maxlength="100"></li>
+                    <li><input class="book-input" type="number" id="pages" placeholder="Pages" max="10000"></li>
+                    <li><label for="read">Have you read it?</label>
+                    <input class="book-input" type="checkbox" id="read"></li>
+                    <li><button id="form-submit" type="submit">Submit</button></li>
+                </ul>
+            </form>
+        </div> 
+
+        <div class="overlay hidden" id="overlay">
+
+        </div>
     </body>
 </html>
