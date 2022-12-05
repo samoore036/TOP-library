@@ -93,7 +93,7 @@ img[src*='theme-light'] {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 #main-content {

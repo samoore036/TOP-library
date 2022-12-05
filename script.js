@@ -1,21 +1,9 @@
-const root = document.documentElement;
-root.className = 'light';
-
-const themeBtn = document.getElementById('theme-btn').addEventListener('click', changeTheme);
-
-const lightBtns = Array.from(document.getElementsByClassName('light-btn'));
-const darkBtns = Array.from(document.getElementsByClassName('dark-btn'));
-darkBtns.forEach(btn => btn.classList.add('hidden'));
-
-function changeTheme() {
-    currTheme = root.className === 'light' ? 'dark' : 'light';
-    root.className = currTheme;
-    if (currTheme === 'dark') {
-        darkBtns.forEach(btn => btn.classList.remove('hidden'));
-        lightBtns.forEach(btn => btn.classList.add('hidden'));
-    } else {
-        darkBtns.forEach(btn => btn.classList.add('hidden'));
-        lightBtns.forEach(btn => btn.classList.remove('hidden'));
+class Book {
+    constructor(title, author, pages, hasRead) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.hasRead = hasRead;
     }
 }
 
@@ -121,12 +109,6 @@ function makeBook(book) {
     bookDisplayDiv.appendChild(bookDiv);
 }
 
-function Book(title, author, pages, hasRead) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.hasRead = hasRead;
-}
 
 function toggleReadStatus(e) {
     const title = e.target.parentNode.firstChild.innerText;
