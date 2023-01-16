@@ -222,6 +222,10 @@ function loadBookModal(){
     const bookForm = document.createElement('form');
     bookForm.setAttribute('id', 'book-form');
     bookForm.classList.add('hidden', 'empty');
+
+    const inputDiv = document.createElement('div');
+    inputDiv.classList.add('input-div');
+    bookForm.appendChild(inputDiv);
  
     const titleLabel = document.createElement('label');
     titleLabel.setAttribute('for', 'title-input');
@@ -233,7 +237,7 @@ function loadBookModal(){
     title.type = 'text';
     title.required = 'true';
     titleLabel.appendChild(title);
-    bookForm.appendChild(titleLabel);
+    inputDiv.appendChild(titleLabel);
 
     const authorLabel = document.createElement('label');
     authorLabel.setAttribute('for', 'author-input');
@@ -245,7 +249,7 @@ function loadBookModal(){
     author.type = 'text';
     author.required = 'true';
     authorLabel.appendChild(author);
-    bookForm.appendChild(authorLabel);
+    inputDiv.appendChild(authorLabel);
 
     const pagesLabel = document.createElement('label');
     pagesLabel.setAttribute('for', 'pages-input');
@@ -258,7 +262,7 @@ function loadBookModal(){
     pages.required = 'true';
     pages.minLength = 1;
     pagesLabel.appendChild(pages);
-    bookForm.appendChild(pagesLabel);
+    inputDiv.appendChild(pagesLabel);
 
     const checkboxLabel = document.createElement('label');
     checkboxLabel.setAttribute('for', 'checkbox-input');
@@ -268,7 +272,7 @@ function loadBookModal(){
     checkbox.setAttribute('id', 'checkbox-input');
     checkbox.type = 'checkbox';
     checkboxLabel.appendChild(checkbox);
-    bookForm.appendChild(checkboxLabel);
+    inputDiv.appendChild(checkboxLabel);
 
     const buttonDiv = loadButtonDiv();
 

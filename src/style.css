@@ -196,13 +196,19 @@ form, #success-div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 /* book form stylings */
 #book-form {
-    height: 68%;
-    width: 28%;
-    gap: 3rem;
+    gap: 5rem;
+}
+
+#book-form .input-div {
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 }
 
 #checkbox-label {
@@ -220,8 +226,14 @@ form, #success-div {
 }
 
 #book-form .small-div {
-    margin-top: -2rem;
+    margin-top: -4rem;
     font-size: 1.1rem;
+}
+
+#book-form .error-message-div {
+    margin-top: -4rem;
+    width: 20rem;
+    height: 3rem;
 }
 
 /* login form stylings */
@@ -241,8 +253,6 @@ form, #success-div {
 
 /* new account form stylings */
 #new-account-form {
-    height: 67%;
-    width: 47%;
     gap: 2.5rem;
 }
 
@@ -262,7 +272,14 @@ ul {
 }
 
 #new-account-form .small-div {
-    margin-top: -2.5rem;
+    margin-top: -1.5rem;
+}
+
+#new-account-form .error-message-div {
+    margin-top: -1rem;
+    width: 60rem;
+    height: 3rem;
+    text-align: center;
 }
 
 /* success div stylings */
